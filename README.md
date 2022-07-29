@@ -21,6 +21,9 @@ An additional README file could be created for challenges but don't count on it.
 
 ## How To Use
 
-### Forknclone
+1. Fork this repo (optional - there is no opportunity to contribute).
+1. Clone to your local.
+1. CD to the project and install dependencies with `npm i`
+1. Run all tests using `npm test`
 
-You can optionally fork this repo, although that really won't be necessary because there is no opportunity to contribute.
+Individual tests can be run with `npm test test_name`
