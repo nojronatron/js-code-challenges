@@ -13,11 +13,7 @@ The code in this repository is not to be evaluated as the best code for the prob
 - Create unit tests in a separate file that can test the module file.
 - Unit tests must pass.
 
-An additional README file could be created for challenges but don't count on it.
-
-!["smiley"](https://github.githubassets.com/images/icons/emoji/unicode/1f603.png?v8)
-
-:smile:
+An additional README file could be created for challenges but don't count on it. :smile:
 
 ## Table of Contents
 
