@@ -4,7 +4,6 @@
   "description": "Code Challenges",
   "main": "index.js",
   "scripts": {
-    "get-challenge": "`which bash` ./code-challenges/bin/get-challenge.sh",
     "test": "jest --verbose --coverage",
     "lint": "eslint '**/*.js'"
   },

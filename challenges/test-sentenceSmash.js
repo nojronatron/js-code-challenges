@@ -1,12 +1,12 @@
 'use strict';
 
-import sentenceSmash from "./sentenceSmash";
+const sentenceSmash = require('./sentenceSmash');
 
 describe('Testing challenge', () => {
-  const inputs = [""];
+  const inputs = [''];
 
   test('Empty string in empty string out', () => {
-    expect(sentenceSmash(inputs)).toStrictEqual("");
-    expect(fizzbuzz(inputs).length).toStrictEqual(0);
+    expect(sentenceSmash(inputs)).toStrictEqual('');
+    expect(sentenceSmash(inputs).length).toStrictEqual(1);
   });
 });

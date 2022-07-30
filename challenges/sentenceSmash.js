@@ -1,11 +1,11 @@
-"use strict";
+'use strict';
 
 function sentenceSmash(inputArr) {
-  let collector = "";
-  if (inputArr == null || inputArr.length < 1) {
+  let collector = '';
+  if (inputArr === null || inputArr.length < 1) {
     return collector;
   }
-  if (inputArr.length == 1) {
+  if (inputArr.length === 1) {
     return inputArr[0];
   }
   let counter = 0;
@@ -13,10 +13,10 @@ function sentenceSmash(inputArr) {
   while (counter <= lastIndex) {
     collector = collector + inputArr[counter];
     if (counter < lastIndex) {
-      collector = collector + " ";
+      collector = collector + ' ';
     }
   }
   return collector;
 }
 
-module.exports = sentenceSmash;
+exports.sentenceSmash = sentenceSmash;
