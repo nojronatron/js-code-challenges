@@ -1,6 +1,6 @@
 'use strict';
 
-const sentenceSmash = require('./sentenceSmash');
+const sentenceSmash = require('../sentenceSmash');
 
 describe('Testing challenge', () => {
   const inputs = [''];
