@@ -1,4 +1,4 @@
-export default function validateSudokuSolution(inputPuzzle) {
+function validateSudokuSolution(inputPuzzle) {
   //  function accepts a 2D array of 9x9 elements
   //  returns true if the following rules apply:
   //    1. each 3x3 group has numbers 1-9
@@ -102,3 +102,5 @@ export default function validateSudokuSolution(inputPuzzle) {
 
   return true;
 }
+
+module.exports = validateSudokuSolution;
