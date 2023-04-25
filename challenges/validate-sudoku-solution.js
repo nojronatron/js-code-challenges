@@ -6,6 +6,8 @@ function validateSudokuSolution(inputPuzzle) {
   //    3. each col group has numbers 1-9
   //    4. no duplicate numbers within any group
   //    5. no zeroes within any group
+  //  Algorithms is O(n^2) in time and O(n) in space
+
   if (typeof inputPuzzle !== "object") {
     return false;
   }
@@ -25,60 +27,66 @@ function validateSudokuSolution(inputPuzzle) {
   const bottomRightSubArr = new Map();
 
   //  traverse each row
-  for (let row = 0; row < 9; row++) {
-    //  test this row
-    const thisRow = new Map(inputPuzzle[row]);
-    if (thisRow.size < 9 || thisRow.has(0)) {
+  for (let outer = 0; outer < 9; outer++) {
+    //  test this currentrow
+    const thisRow = inputPuzzle[outer];
+    const rowMap = new Map();
+    thisRow.forEach((element) => {
+      rowMap.set(element);
+    });
+
+    if (rowMap.size < 9 || rowMap.has(0)) {
       return false;
     }
 
     //  use a Map to collect this column values
     const thisCol = new Map();
 
-    //  traverse each col
-    for (let col = 0; col < 9; col++) {
+    //  traverse each column
+    for (let inner = 0; inner < 9; inner++) {
       //  fast fail if any zeroes are detected
-      if (inputPuzzle[row][col] === 0) {
+      if (inputPuzzle[inner][outer] === 0) {
         return false;
       }
 
       //  load the column
-      thisCol.set(inputPuzzle[row][col]);
+      const colElementValue = inputPuzzle[inner][outer];
+      thisCol.set(colElementValue);
 
       //  configure each 3x3 group based on row-by-col values
-      if (0 <= row && row <= 2) {
-        if (0 <= col && col <= 2) {
-          topLeftSubArr.set(inputPuzzle[row][col]);
+      if (0 <= outer && outer <= 2) {
+        if (0 <= inner && inner <= 2) {
+          topLeftSubArr.set(inputPuzzle[outer][inner]);
         }
-        if (3 <= col && col <= 5) {
-          topMiddleSubArr.set(inputPuzzle[row][col]);
+        if (3 <= inner && inner <= 5) {
+          topMiddleSubArr.set(inputPuzzle[outer][inner]);
         }
-        if (6 <= col && col <= 8) {
-          topRightSubArr.set(inputPuzzle[row][col]);
-        }
-      }
-
-      if (3 <= row && row <= 5) {
-        if (0 <= col && col <= 2) {
-          midLeftSubArr.set(inputPuzzle[row][col]);
-        }
-        if (3 <= col && col <= 5) {
-          centerSubArr.set(inputPuzzle[row][col]);
-        }
-        if (6 <= col && col <= 8) {
-          midRightSubArr.set(inputPuzzle[row][col]);
+        if (6 <= inner && inner <= 8) {
+          topRightSubArr.set(inputPuzzle[outer][inner]);
         }
       }
 
-      if (6 <= row && row <= 8) {
-        if (0 <= col && col <= 2) {
-          bottomLeftSubArr.set(inputPuzzle[row][col]);
+      if (3 <= outer && outer <= 5) {
+        if (0 <= inner && inner <= 2) {
+          midLeftSubArr.set(inputPuzzle[outer][inner]);
         }
-        if (3 <= col && col <= 5) {
-          bottomMiddleSubArr.set(inputPuzzle[row][col]);
+        if (3 <= inner && inner <= 5) {
+          centerSubArr.set(inputPuzzle[outer][inner]);
         }
-        if (6 <= col && col <= 8) {
-          bottomRightSubArr.set(inputPuzzle[row][col]);
+        if (6 <= inner && inner <= 8) {
+          midRightSubArr.set(inputPuzzle[outer][inner]);
+        }
+      }
+
+      if (6 <= outer && outer <= 8) {
+        if (0 <= inner && inner <= 2) {
+          bottomLeftSubArr.set(inputPuzzle[outer][inner]);
+        }
+        if (3 <= inner && inner <= 5) {
+          bottomMiddleSubArr.set(inputPuzzle[outer][inner]);
+        }
+        if (6 <= inner && inner <= 8) {
+          bottomRightSubArr.set(inputPuzzle[outer][inner]);
         }
       }
     }
