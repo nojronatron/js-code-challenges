@@ -1,5 +1,5 @@
 const { expect } = require("@jest/globals");
-const { default: test } = require("node:test");
+// const { default: test } = require("node:test");
 const validateSudokuSolution = require("../validate-sudoku-solution");
 
 describe("Test validator", () => {
