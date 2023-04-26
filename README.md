@@ -4,7 +4,7 @@ Code challenges in javascript.
 
 Created to record my activities practicing solving code challenges using effective problem solving techniques.
 
-The code in this repository is not to be evaluated as the best code for the problem - instead the code is an honest result of my attempts to solve a problem, and not consider the most elegant or shortest-line-count solution(s).
+The code in this repository is not to be evaluated as a source of _best solutions_ for any given challenge. Instead the code is an honest result of my attempts to solve a problem (in a very short period of time) and to not consider the most elegant or shortest-line-count solutions.
 
 ## Goals
 
@@ -17,8 +17,8 @@ An additional README file could be created for challenges but don't count on it.
 
 ## Table of Contents
 
-- [ ] CodeWars: [Sentence Smash](./challenges/sentenceSmash.js) and its [tests](./challenges/__tests__/test-sentenceSmash.js)
-- [x] CodeWars: [Validate Sudoku](./challenges/validate-sudoku-solution.js) and its [tests](./challenges/__tests__/test-validateSudokuSolution.js)
+- [x] [Sentence Smash](./challenges/sentenceSmash.js) and its [tests](./challenges/__tests__/test-sentenceSmash.js)
+- [x] [Validate Sudoku](./challenges/validate-sudoku-solution.js) and its [tests](./challenges/__tests__/test-validateSudokuSolution.js)
 
 ## Requires
 

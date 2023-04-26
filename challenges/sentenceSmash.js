@@ -1,7 +1,5 @@
-'use strict';
-
 function sentenceSmash(inputArr) {
-  let collector = '';
+  let collector = "";
   if (inputArr === null || inputArr.length < 1) {
     return collector;
   }
@@ -13,8 +11,9 @@ function sentenceSmash(inputArr) {
   while (counter <= lastIndex) {
     collector = collector + inputArr[counter];
     if (counter < lastIndex) {
-      collector = collector + ' ';
+      collector = collector + " ";
     }
+    counter++;
   }
   return collector;
 }
