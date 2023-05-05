@@ -1,4 +1,5 @@
 const { expect } = require("@jest/globals");
+const reverseSentence = require('../reverseSentence');
 
 describe("Test reverseString method", () => {
     test("empty input returns empty string", () => {
