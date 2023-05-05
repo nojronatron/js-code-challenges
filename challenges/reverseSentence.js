@@ -19,4 +19,4 @@ function reverseSentence(sentence) {
     return result;
 }
 
-module.exports = reverseSentence;
+exports.reverseSentence = reverseSentence;
