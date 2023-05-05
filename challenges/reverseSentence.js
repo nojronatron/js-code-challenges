@@ -12,7 +12,7 @@ function reverseSentence(sentence) {
     let result = "";
     const sentenceArr = sentence.split('');
     
-    for(let idx=sentenceLen-1; idx > 0; idx--){
+    for(let idx=sentenceLen-1; idx >= 0; idx--){
         result += sentenceArr[idx];
     }
 
