@@ -17,8 +17,9 @@ An additional README file could be created for challenges but don't count on it.
 
 ## Table of Contents
 
-- [x] [Sentence Smash](./challenges/sentenceSmash.js) and its [tests](./challenges/__tests__/test-sentenceSmash.js)
-- [x] [Validate Sudoku](./challenges/validate-sudoku-solution.js) and its [tests](./challenges/__tests__/test-validateSudokuSolution.js)
+- [x] [Two Equal Sum Arrays](./challenges/twoSetsOfEqualSum.js) and its [tests](./challenges/__tests__/test-twoSetsOfEqualSum.js).
+- [x] [Sentence Smash](./challenges/sentenceSmash.js) and its [tests](./challenges/__tests__/test-sentenceSmash.js).
+- [x] [Validate Sudoku](./challenges/validate-sudoku-solution.js) and its [tests](./challenges/__tests__/test-validateSudokuSolution.js).
 
 ## Requires
 
