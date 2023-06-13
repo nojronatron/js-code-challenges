@@ -2,7 +2,7 @@
  * Function accepts a 2D array of numbers and returns
  * an object with the sum of each row and column
  * @param {Array} numberArray
- * @returns {Object} { rowSum: [Number], colSum: [Number] }
+ * @returns {Object} { rowSum: [Number, ...], colSum: [Number, ...] }
  */
 module.exports = function sumRowsAndCols(numberArray) {
   if (numberArray == undefined || numberArray.length == 0) {
@@ -17,6 +17,8 @@ module.exports = function sumRowsAndCols(numberArray) {
   const rowSum = new Array(numberArray.length).fill(0);
   const colSum = new Array(numberArray[0].length).fill(0);
 
+  // overall Time complexity is O(nm) where n=rows and m=columns
+  // overall Space complexity is O(n+m) where n=rows and m=columns
   for (let rowIdx = 0; rowIdx < numberArray.length; rowIdx++) {
     for (let colIdx = 0; colIdx < numberArray[rowIdx].length; colIdx++) {
       const cellVal = numberArray[rowIdx][colIdx];
