@@ -33,4 +33,10 @@ describe("Test rowColSums method", () => {
       ])
     ).toStrictEqual({ rowSum: [6, 15, 24], colSum: [12, 15, 18] });
   });
+  test("input with jagged 2d array will return an empty rowSum and colSum", () => {
+    expect(sumRowsAndCols([[1, 2], [3]])).toStrictEqual({
+      rowSum: [],
+      colSum: [],
+    });
+  });
 });
