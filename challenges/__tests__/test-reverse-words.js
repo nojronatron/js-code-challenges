@@ -1,7 +1,6 @@
 const { expect } = require("@jest/globals");
 const reverseWords = require("../reverse-words");
 
-// set up chai testing
 describe("Test reverseWords method", () => {
   // test empty input returns empty string
   it("empty input returns empty string", () => {
