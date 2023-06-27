@@ -18,6 +18,7 @@ An additional README file could be created for certain challenges, and would be 
 
 ## Links Challenge Code and Unit Tests
 
+- [x] [Reverse Words](./challenges/reverse-words.js) and its [tests](./challenges/__tests__/test-reverse-words.js).
 - [x] [Two Equal Sum Arrays](./challenges/twoSetsOfEqualSum.js) and its [tests](./challenges/__tests__/test-twoSetsOfEqualSum.js).
 - [x] [Sentence Smash](./challenges/sentenceSmash.js) and its [tests](./challenges/__tests__/test-sentenceSmash.js).
 - [x] [Validate Sudoku](./challenges/validate-sudoku-solution.js) and its [tests](./challenges/__tests__/test-validateSudokuSolution.js).
@@ -25,8 +26,9 @@ An additional README file could be created for certain challenges, and would be 
 
 ## Requires
 
-- Node version 16.14 or newer.
-- Jest version 27.5.1 or newer.
+- Node version 16 or newer.
+- Jest version 29.5.0 or newer.
+- ESLint version 8.43.0 or newer.
 
 ## How To Use
 
@@ -35,4 +37,4 @@ An additional README file could be created for certain challenges, and would be 
 1. CD to the project and install dependencies with `npm install`
 1. Run all tests using `npm test`
 
-Individual tests can be run with `npm test test_name`
+Individual tests can be run with `npm test test_name` example `npm test reverse-words`.
