@@ -8,11 +8,11 @@ function validateSudokuSolution(inputPuzzle) {
   //    5. no zeroes within any group
   //  Algorithms is O(n^2) in time and O(n) in space
 
-  if (typeof inputPuzzle !== "object") {
+  if (typeof inputPuzzle !== 'object') {
     return false;
   }
 
-  if (inputPuzzle.length < 9) {
+  if (inputPuzzle.length != 9) {
     return false;
   }
 
@@ -35,20 +35,16 @@ function validateSudokuSolution(inputPuzzle) {
       rowMap.set(element);
     });
 
-    if (rowMap.size < 9 || rowMap.has(0)) {
+    //  fast fail if any zeroes are detected
+    if (rowMap.size != 9 || rowMap.has(0)) {
       return false;
     }
 
     //  use a Map to collect this column values
     const thisCol = new Map();
 
-    //  traverse each column
+    //  traverse each column 1 through 9
     for (let inner = 0; inner < 9; inner++) {
-      //  fast fail if any zeroes are detected
-      if (inputPuzzle[inner][outer] === 0) {
-        return false;
-      }
-
       //  load the column
       const colElementValue = inputPuzzle[inner][outer];
       thisCol.set(colElementValue);
@@ -90,20 +86,18 @@ function validateSudokuSolution(inputPuzzle) {
         }
       }
     }
-    if (thisCol.size < 9) {
-      return false;
-    }
   }
 
+  // sub-arrays must each be 9 elements in size
   if (
-    topLeftSubArr.size < 9 ||
-    topMiddleSubArr.size < 9 ||
-    topRightSubArr.size < 9 ||
-    midLeftSubArr.size < 9 ||
-    centerSubArr.size < 9 ||
-    bottomLeftSubArr.size < 9 ||
-    bottomMiddleSubArr.size < 9 ||
-    bottomRightSubArr.size < 9
+    topLeftSubArr.size != 9 ||
+    topMiddleSubArr.size != 9 ||
+    topRightSubArr.size != 9 ||
+    midLeftSubArr.size != 9 ||
+    centerSubArr.size != 9 ||
+    bottomLeftSubArr.size != 9 ||
+    bottomMiddleSubArr.size != 9 ||
+    bottomRightSubArr.size != 9
   ) {
     return false;
   }
