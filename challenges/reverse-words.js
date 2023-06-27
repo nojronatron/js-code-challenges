@@ -5,20 +5,22 @@
  * @returns {String} reversed sentance
  */
 module.exports = function reverseWords(str) {
-  if (str === undefined) return "";
-  let splitArr = str.split(" ");
-  let resultStr = "";
+  if (str === undefined) {
+    return '';
+  }
+  const splitArr = str.split(' ');
+  let resultStr = '';
   splitArr.forEach((item) => {
-    let tempStr = "";
+    let tempStr = '';
     // do not process existing spaces
-    if (item === "" || item === " ") {
+    if (item === '' || item === ' ') {
       return;
     }
     for (let idx = item.length - 1; idx >= 0; idx--) {
       const currentChar = item.charAt(idx);
       tempStr += currentChar;
     }
-    resultStr += tempStr + " ";
+    resultStr += tempStr + ' ';
   });
   return resultStr.trim();
 };

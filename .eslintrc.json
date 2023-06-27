@@ -9,6 +9,8 @@
     "ecmaVersion": "latest"
   },
   "rules": {
+    "semi": "off",
+    "space-before-function-paren": "off",
     "eol-last": "error",
     "eqeqeq": ["error", "always"],
     "indent": ["error", 2],
