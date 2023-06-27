@@ -10,7 +10,7 @@
   },
   "scripts": {
     "test": "jest --verbose --coverage",
-    "lint": "eslint '**/*.js'"
+    "lint": "eslint challenges/**/*.js"
   },
   "author": "nojronatron",
   "license": "MIT",
