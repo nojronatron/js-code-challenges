@@ -1,8 +1,8 @@
-const chai = require('chai');
-chai.should();
+const expect = require('chai');
+expect.should();
 
 describe('String prototype toAlternatingCase', () => {
   it('should return a string', () => {
-    'hello world'.toAlternatingCase().should.be.a('string');
+    expect('hello world'.toAlternatingCase()).should.be.a('string');
   });
 });
