@@ -18,6 +18,7 @@ An additional README file could be created for certain challenges, and would be 
 
 ## Links Challenge Code and Unit Tests
 
+- [x] [Replace URL Spaces](./challenges/replace-url-spaces.js) and its [tests](./challenges/__tests__/test-replace-url-spaces.js).
 - [x] [Reverse Words](./challenges/reverse-words.js) and its [tests](./challenges/__tests__/test-reverse-words.js).
 - [x] [Two Equal Sum Arrays](./challenges/twoSetsOfEqualSum.js) and its [tests](./challenges/__tests__/test-twoSetsOfEqualSum.js).
 - [x] [Sentence Smash](./challenges/sentenceSmash.js) and its [tests](./challenges/__tests__/test-sentenceSmash.js).
