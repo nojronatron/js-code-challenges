@@ -5,7 +5,7 @@ module.exports = function convertUrlSpaces(inputUrl) {
   if (inputUrl.length < 1) {
     return '';
   }
-  if (inputUrl.length === 1 && inputUrl === '') {
+  if (inputUrl.length === 1 && inputUrl === ' ') {
     return '%20';
   }
 
